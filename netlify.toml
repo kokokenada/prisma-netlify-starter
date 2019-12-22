@@ -3,6 +3,8 @@
 #  Command = ". ./set-env-vars.sh && rm -rf node_modules && npm i && npm run db-deploy-graphql-gen && npm run test && npm run build"
   Functions = "lambda"
   Publish = "public"
+  [lifecycle]
+    onInit = ". ./set-env.sh"
 
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.

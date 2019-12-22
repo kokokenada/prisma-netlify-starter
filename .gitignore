@@ -140,3 +140,5 @@ graphql-dist/
 
 # prisma back up
 prisma/schema.prisma.new
+
+dist
