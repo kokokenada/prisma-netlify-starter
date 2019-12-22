@@ -1,10 +1,14 @@
 [build]
   Command = "npm run build"
 #  Command = ". ./set-env-vars.sh && rm -rf node_modules && npm i && npm run db-deploy-graphql-gen && npm run test && npm run build"
-  Functions = "lambda"
-  Publish = "public"
+  functions = "lambda"
+  publish = "public"
   [build.lifecycle]
-  onInit = [". ./set-env.sh", "echo $POSTGRES_URL"]
+  onInit = [
+    "echo onInit",
+    ". ./set-env.sh",
+    "echo $POSTGRES_URL"
+  ]
 
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
