@@ -1,5 +1,5 @@
 [build]
-  Command = "npm run build"
+  command = "npm run build"
 #  Command = ". ./set-env-vars.sh && rm -rf node_modules && npm i && npm run db-deploy-graphql-gen && npm run test && npm run build"
   functions = "lambda"
   publish = "public"
