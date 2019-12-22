@@ -1,0 +1,34 @@
+[build]
+  Command = "npm run build"
+#  Command = ". ./set-env-vars.sh && rm -rf node_modules && npm i && npm run db-deploy-graphql-gen && npm run test && npm run build"
+  Functions = "lambda"
+  Publish = "public"
+
+# Production context: all deploys from the Production branch set in your site's
+# deploy contexts will inherit these settings.
+# [context.production]
+#  publish = "project/output/"
+#  command = "make publish"
+#  environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.0.1" }
+
+# Deploy Preview context: all deploys generated from a pull/merge request will
+# inherit these settings.
+[context.deploy-preview.environment]
+  TEST_ENV_VAR = "context.deploy-preview"
+
+# Branch Deploy context: all deploys that are not from a pull/merge request or
+# from the Production branch will inherit these settings.
+[context.branch-deploy.environment]
+  TEST_ENV_VAR = "context.branch-deploy.environment"
+
+# Specific branch context: all deploys from this specific branch will inherit
+# these settings.
+#[context.staging] # 'staging' is a branch name
+#  command = "echo 'staging'"
+#  base = "staging"
+
+# For contexts of branches with special characters, enclose the branch name
+# with quotes.
+#[context."feat/branch"]
+#  command = "echo 'special branch'"
+#  base = "branch"

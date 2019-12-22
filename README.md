@@ -4,12 +4,14 @@ This example shows how to implement a **GraphQL server with TypeScript** based o
 
 ## How to use
 
-### 1. Download example & install dependencies
+### 1. Local Development
 
-Clone the `prisma2` branch of this repository:
 
 ```
-git clone --single-branch --branch prisma2 git@github.com:prisma/prisma-examples.git
+cd prisma
+docker-compose up
+cd ..
+NODE_ENV=development npm run db-deploy-gen
 ```
 
 Install Node dependencies:
