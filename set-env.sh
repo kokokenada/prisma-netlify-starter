@@ -60,4 +60,4 @@ fi
 echo "set-env.sh: USE_POSTGRES_PORT=$USE_POSTGRES_PORT"
 
 export POSTGRES_URL=postgresql://$USE_POSTGRES_USER:$USE_POSTGRES_PASSWORD@$USE_POSTGRES_SERVER:$USE_POSTGRES_PORT/prisma2b?schema=$USE_BRANCH'&sslaccept=accept_invalid_certs'
-echo "set-env.sh: POSTGRES_URL=$POSTGRES_URL"
+# exposes PWD echo "set-env.sh: POSTGRES_URL=$POSTGRES_URL"

@@ -3,11 +3,11 @@
   functions = "lambda"
   publish = "public"
   [build.lifecycle]
-  onInit = [
-    "echo onInit",
-    ". ./set-env.sh",
-    "echo $POSTGRES_URL"
-  ]
+#  onInit = [
+#    "echo onInit",
+#    ". ./set-env.sh",
+#    "echo $POSTGRES_URL"
+#  ]
   onBuild = "npm run build"
 
 # Production context: all deploys from the Production branch set in your site's
