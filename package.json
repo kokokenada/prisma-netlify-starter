@@ -3,7 +3,7 @@
   "scripts": {
     "start": "node dist/server",
     "clean": "rm -rf dist",
-    "build": "npm run clean && npm run db-deploy-gen && && npm run graphql-gen",
+    "build": "npm run clean && npm run db-deploy-gen && npm run graphql-gen",
     "db-deploy-gen": "./db-deploy-gen.sh",
     "graphql-gen": "./graphql-gen.sh",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly src/server",
